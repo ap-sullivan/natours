@@ -40,3 +40,121 @@ body{
     background-position: top;
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 }
+
+.logo-box{
+    position: absolute;
+    top: 6rem;
+    left: 7rem;
+}
+
+.logo{
+    position: relative;
+    height: 4rem;
+}
+
+.text-box{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    /* this is an alternative to using flex (below in heading-primary) */
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+}
+
+.heading-primary{
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+    /* height: 80vh; */
+    color: #fff;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    margin-bottom: 6rem;
+}
+
+.heading-primary-main{
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 4rem;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+
+}
+
+.heading-primary-sub{
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.8rem;
+    animation: moveInRight 1s ease-out;
+}
+
+@keyframes moveInLeft {
+
+    0%{
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+
+    80%{
+        transform: translateX(1rem);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+@keyframes moveInRight {
+
+    0%{
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+    80%{
+        
+        transform: translateX(1rem);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+.btn:link,
+.btn:visited{
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    border-radius: 500px;
+    transition: all .2s;
+}
+
+.btn:hover{
+    transform: translateY(-.3rem);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active{
+    transform: translateY(.1rem);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-white{
+    background-color: #fff;
+    color: #777;
+    font-size: 1.8rem;
+    letter-spacing: .1rem;
+}
+
+
+
