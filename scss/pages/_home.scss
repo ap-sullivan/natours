@@ -1,0 +1,84 @@
+.section-about{
+    background-color: $color-grey-light-1;
+    padding: 25rem 0;
+    margin-top: -20vh;
+    
+    &__main-container {
+        padding:1.5rem 5rem;
+        display: flex;
+        justify-content: space-around;
+        // align-items: center;
+    }
+    
+    &__text-container {
+    
+        margin-right: 4rem;
+      
+        
+        
+    }
+    
+    &__text {
+        margin-top: 2rem;
+        font-size: $font-default;
+        
+        
+        &:not(:last-child) {
+            margin-bottom: 3rem;
+        }
+    }
+    
+    
+    &__gallery {
+        
+        position: relative;
+    
+        
+        &-composition {
+            width: 60rem;
+            height: 60rem;
+
+            
+          
+        }
+        
+        &-image {
+            position: absolute;
+            box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
+            width: 55%;
+            border-radius:  3px;
+            z-index: 10;
+            transition: all 0.2s;
+            outline-offset: 2rem;
+
+            &--p1 {
+                left: 0rem;
+                top: -1rem;
+            }
+
+            &--p2 {
+                right: 4rem;
+                top: 7rem;
+            }
+
+            &--p3 {
+                left: 16%;
+                top: 18rem;
+            }
+
+            &:hover {
+                outline: 1.5rem solid $color-primary;
+                transform: scale(1.05) translateY(-.5rem);
+                box-shadow: 0 2.5rem 4rem rgba($color-black, .5);
+                z-index: 20;
+            }
+           
+        }
+
+    }
+    .section-about__gallery-composition:hover &__gallery-image:not(:hover){
+        transform: scale(0.9);
+    }
+    
+}
+
