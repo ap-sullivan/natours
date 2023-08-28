@@ -1,6 +1,8 @@
 .section-about{
     background-color: $color-grey-light-1;
-    padding: 25rem 0;
+    padding-top: 25rem;
+    padding-bottom: 30rem;
+    // padding-bottom: 10rem;
     margin-top: -20vh;
     
     &__main-container {
@@ -11,11 +13,7 @@
     }
     
     &__text-container {
-    
         margin-right: 4rem;
-      
-        
-        
     }
     
     &__text {
@@ -30,16 +28,11 @@
     
     
     &__gallery {
-        
         position: relative;
-    
         
         &-composition {
             width: 60rem;
-            height: 60rem;
-
-            
-          
+            // height: 60rem;
         }
         
         &-image {
@@ -74,11 +67,74 @@
             }
            
         }
-
     }
     .section-about__gallery-composition:hover &__gallery-image:not(:hover){
         transform: scale(0.9);
+
+    }    
+}
+
+.vital-info {
+    margin-top: -20vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;        
+    height: 95vh;
+    background-image: linear-gradient(to right bottom,
+    rgba($color-primary-light, 0.807),
+    rgba($color-primary-dark, 0.807)),
+    url(../img/nat-4.jpg);
+    background-size: cover;
+    background-position: top;
+    clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 80%);
+    transition: transform .2s;
+
+    &__card {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        height: 36rem;
+        width: 20%;
+        background-color: rgba($color-grey-light-1, .6);
+        margin-right: 6rem;
+        padding: 5rem 3rem;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
+        font-size: 1.5rem;
+
+        &--c1 {
+        margin-left: 12rem;
+        }
+        
+        &:last-child {
+        margin-right: 12rem;
+        }
+
+        &:hover{
+            transform: translateY(-1.5rem) scale(1.03);
+        }
+
     }
-    
+
+    &__icon {
+        font-size: 6rem;
+        margin-bottom: .5rem; 
+        display: inline-block;
+        background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+
+    &__card-title {
+        // font-size: 1.6rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+
+    }
+
+    &__card-text {
+        // font-size: 1.4rem;
+    }
 }
 
